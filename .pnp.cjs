@@ -19,14 +19,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "template",
+        "name": "revolution",
         "reference": "workspace:."
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["template", ["workspace:."]]
+      ["revolution", ["workspace:."]]
     ],
     "fallbackPool": [
     ],
@@ -36,8 +36,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@smol-code/tsconfig", "npm:1.0.0"],
+            ["@types/fs-extra", "npm:9.0.13"],
             ["@types/node", "npm:17.0.8"],
-            ["ts-node", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:10.4.0"],
+            ["dotenv", "npm:12.0.3"],
+            ["eris", "https://github.com/DonovanDMC/eris.git#commit=5ffe1c11fd2d9f0c51cf29c9c72c7679d17bd2fd"],
+            ["fs-extra", "npm:10.0.0"],
+            ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -107,6 +111,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/fs-extra", [
+        ["npm:9.0.13", {
+          "packageLocation": "./.yarn/cache/@types-fs-extra-npm-9.0.13-12fb7badd7-add79e212a.zip/node_modules/@types/fs-extra/",
+          "packageDependencies": [
+            ["@types/fs-extra", "npm:9.0.13"],
+            ["@types/node", "npm:17.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/node", [
         ["npm:17.0.8", {
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.8-413315941f-f4cadeb9e6.zip/node_modules/@types/node/",
@@ -161,6 +175,59 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["dotenv", [
+        ["npm:12.0.3", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-12.0.3-c66e04f2f5-06c851c729.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:12.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["eris", [
+        ["https://github.com/DonovanDMC/eris.git#commit=5ffe1c11fd2d9f0c51cf29c9c72c7679d17bd2fd", {
+          "packageLocation": "./.yarn/cache/eris-https-f1016fce70-9efb871b62.zip/node_modules/eris/",
+          "packageDependencies": [
+            ["eris", "https://github.com/DonovanDMC/eris.git#commit=5ffe1c11fd2d9f0c51cf29c9c72c7679d17bd2fd"],
+            ["opusscript", "npm:0.0.8"],
+            ["tweetnacl", "npm:1.0.3"],
+            ["ws", "virtual:f1016fce701f25bc23d4beb1ba3b0926b5aedc9bf9fe9525e65306486c34d8f57c475340f78b1a5ec92e3f60e3d8ffad470bcb7bcf9db3e4be7da529473f3f2d#npm:8.4.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["fs-extra", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/fs-extra-npm-10.0.0-4f8c704115-5285a3d8f3.zip/node_modules/fs-extra/",
+          "packageDependencies": [
+            ["fs-extra", "npm:10.0.0"],
+            ["graceful-fs", "npm:4.2.9"],
+            ["jsonfile", "npm:6.1.0"],
+            ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["graceful-fs", [
+        ["npm:4.2.9", {
+          "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.9-ee48e00aaa-68ea4e07ff.zip/node_modules/graceful-fs/",
+          "packageDependencies": [
+            ["graceful-fs", "npm:4.2.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["jsonfile", [
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/jsonfile-npm-6.1.0-20a4796cee-7af3b8e1ac.zip/node_modules/jsonfile/",
+          "packageDependencies": [
+            ["jsonfile", "npm:6.1.0"],
+            ["graceful-fs", "npm:4.2.9"],
+            ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["make-error", [
         ["npm:1.3.6", {
           "packageLocation": "./.yarn/cache/make-error-npm-1.3.6-ccb85d9458-b86e5e0e25.zip/node_modules/make-error/",
@@ -170,14 +237,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["template", [
+      ["opusscript", [
+        ["npm:0.0.8", {
+          "packageLocation": "./.yarn/cache/opusscript-npm-0.0.8-3f6539b049-0c3175a401.zip/node_modules/opusscript/",
+          "packageDependencies": [
+            ["opusscript", "npm:0.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["revolution", [
         ["workspace:.", {
           "packageLocation": "./",
           "packageDependencies": [
-            ["template", "workspace:."],
+            ["revolution", "workspace:."],
             ["@smol-code/tsconfig", "npm:1.0.0"],
+            ["@types/fs-extra", "npm:9.0.13"],
             ["@types/node", "npm:17.0.8"],
-            ["ts-node", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:10.4.0"],
+            ["dotenv", "npm:12.0.3"],
+            ["eris", "https://github.com/DonovanDMC/eris.git#commit=5ffe1c11fd2d9f0c51cf29c9c72c7679d17bd2fd"],
+            ["fs-extra", "npm:10.0.0"],
+            ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -191,10 +271,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:10.4.0", {
-          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-4fa8f0b8b5/0/cache/ts-node-npm-10.4.0-04cb6e2279-3933ac0a93.zip/node_modules/ts-node/",
+        ["virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0", {
+          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-fec61b93c0/0/cache/ts-node-npm-10.4.0-04cb6e2279-3933ac0a93.zip/node_modules/ts-node/",
           "packageDependencies": [
-            ["ts-node", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:10.4.0"],
+            ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],
             ["@cspotcode/source-map-support", "npm:0.7.0"],
             ["@swc/core", null],
             ["@swc/wasm", null],
@@ -227,11 +307,55 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["tweetnacl", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/tweetnacl-npm-1.0.3-b7eef04660-e4a57cac18.zip/node_modules/tweetnacl/",
+          "packageDependencies": [
+            ["tweetnacl", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["typescript", [
         ["patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53", {
           "packageLocation": "./.yarn/cache/typescript-patch-0b90225f97-2e488dde7d.zip/node_modules/typescript/",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["universalify", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/universalify-npm-2.0.0-03b8b418a8-2406a4edf4.zip/node_modules/universalify/",
+          "packageDependencies": [
+            ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ws", [
+        ["npm:8.4.2", {
+          "packageLocation": "./.yarn/cache/ws-npm-8.4.2-f66010800e-4369caaac8.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "npm:8.4.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:f1016fce701f25bc23d4beb1ba3b0926b5aedc9bf9fe9525e65306486c34d8f57c475340f78b1a5ec92e3f60e3d8ffad470bcb7bcf9db3e4be7da529473f3f2d#npm:8.4.2", {
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-4e81b4dee2/0/cache/ws-npm-8.4.2-f66010800e-4369caaac8.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "virtual:f1016fce701f25bc23d4beb1ba3b0926b5aedc9bf9fe9525e65306486c34d8f57c475340f78b1a5ec92e3f60e3d8ffad470bcb7bcf9db3e4be7da529473f3f2d#npm:8.4.2"],
+            ["@types/bufferutil", null],
+            ["@types/utf-8-validate", null],
+            ["bufferutil", null],
+            ["utf-8-validate", null]
+          ],
+          "packagePeers": [
+            "@types/bufferutil",
+            "@types/utf-8-validate",
+            "bufferutil",
+            "utf-8-validate"
           ],
           "linkType": "HARD",
         }]

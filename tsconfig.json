@@ -1,13 +1,21 @@
 {
-  "extends": "@smol-code/tsconfig",
-  "compilerOptions": {
-    "outDir": "./build",
-    "baseUrl": "./src",
-    "types": [
-      "node"
-    ]
-  },
-  "include": [
-    "**/*"
-  ]
+	"extends": "@smol-code/tsconfig",
+	"compilerOptions": {
+		"outDir": "./build",
+		"baseUrl": "./src",
+		"skipLibCheck": true,
+		"types": [
+			"node"
+		],
+		"paths": {
+			"@root/*": ["../*"],
+			"@config": ["config/index.ts"],
+			"@config/*": ["config/*"],
+			"@events/*": ["config/*"],
+			"@Revolt": ["main.ts"],
+		}
+	},
+	"include": [
+		"**/*"
+	]
 }
