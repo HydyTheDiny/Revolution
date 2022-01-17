@@ -28,7 +28,7 @@ export default class CommandHandler {
   static loadCategoryCommands = (name: string, directory: string) => {
     const cat = this.getCategory(name);
     if (!cat) throw new Error(`No category found for ${name} (${directory})`)
-    fs.readdirSync(directory).filter(file => file.startsWith('index.')).forEach(file => {
+    fs.readdirSync(directory).filter(file => !file.startsWith('index.')).forEach(file => {
       const { default: cmd } = (require(`${directory}/${file}`) as { default: Command; });
       this.registerCommand(name, cmd, false);
     })

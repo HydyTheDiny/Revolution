@@ -1,17 +1,14 @@
 import ClientEvent from "@util/ClientEvent";
+import ExtendedMessage from "@util/ExtendedMessage";
+import { AnyThreadChannel, GuildTextableChannel, Message } from "eris";
 import mongoose, { Schema, model} from 'mongoose';
 
 export default new ClientEvent('messageCreate', async function(message) {
-    await mongoose.connect(process.env.DATABASE!);
-    const XPModel = model('XP', new Schema({
-      user: { type: String, default: message.author.id },
-      level: { type: Number, min: 1 },
-      xp: { type: Number, min: 0 }
-    }));
+  const msg = new ExtendedMessage(message as Message<Exclude<GuildTextableChannel, AnyThreadChannel>>, this);
+  const load = await msg.load();
+  const { cmd } = msg;
 
-    const userXP = new XPModel();
-    const a = userXP.save();
+  if ( load === false || cmd === null) return;
 
-    let exp = Math.floor()
-        
+  void cmd.run.call(this, msg, cmd);
 });

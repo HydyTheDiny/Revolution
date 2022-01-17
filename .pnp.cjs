@@ -39,12 +39,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/fs-extra", "npm:9.0.13"],
             ["@types/module-alias", "npm:2.0.1"],
             ["@types/mongoose", "npm:5.11.97"],
+            ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:17.0.8"],
+            ["@types/string-argv", "npm:0.3.0"],
+            ["discord-command-parser", "npm:1.5.3"],
             ["dotenv", "npm:12.0.3"],
             ["eris", "https://github.com/DonovanDMC/eris.git#commit=5ffe1c11fd2d9f0c51cf29c9c72c7679d17bd2fd"],
             ["fs-extra", "npm:10.0.0"],
             ["module-alias", "npm:2.2.2"],
             ["mongoose", "npm:6.1.6"],
+            ["ms", "npm:2.1.3"],
+            ["string-argv", "npm:0.3.1"],
             ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
@@ -144,6 +149,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/ms", [
+        ["npm:0.7.31", {
+          "packageLocation": "./.yarn/cache/@types-ms-npm-0.7.31-ea3b89342b-daadd354ae.zip/node_modules/@types/ms/",
+          "packageDependencies": [
+            ["@types/ms", "npm:0.7.31"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/node", [
         ["npm:17.0.5", {
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.5-78c23cecdc-105535e787.zip/node_modules/@types/node/",
@@ -156,6 +170,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.8-413315941f-f4cadeb9e6.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:17.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/string-argv", [
+        ["npm:0.3.0", {
+          "packageLocation": "./.yarn/cache/@types-string-argv-npm-0.3.0-6f9fdc1f85-827e51283f.zip/node_modules/@types/string-argv/",
+          "packageDependencies": [
+            ["@types/string-argv", "npm:0.3.0"],
+            ["string-argv", "npm:0.3.1"]
           ],
           "linkType": "HARD",
         }]
@@ -283,6 +307,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/diff-npm-4.0.2-73133c7102-f2c09b0ce4.zip/node_modules/diff/",
           "packageDependencies": [
             ["diff", "npm:4.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["discord-command-parser", [
+        ["npm:1.5.3", {
+          "packageLocation": "./.yarn/cache/discord-command-parser-npm-1.5.3-ad6533612a-9d9fb7f1a4.zip/node_modules/discord-command-parser/",
+          "packageDependencies": [
+            ["discord-command-parser", "npm:1.5.3"]
           ],
           "linkType": "HARD",
         }]
@@ -456,6 +489,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.1.3", {
+          "packageLocation": "./.yarn/cache/ms-npm-2.1.3-81ff3cfac1-aa92de6080.zip/node_modules/ms/",
+          "packageDependencies": [
+            ["ms", "npm:2.1.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["opusscript", [
@@ -494,12 +534,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/fs-extra", "npm:9.0.13"],
             ["@types/module-alias", "npm:2.0.1"],
             ["@types/mongoose", "npm:5.11.97"],
+            ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:17.0.8"],
+            ["@types/string-argv", "npm:0.3.0"],
+            ["discord-command-parser", "npm:1.5.3"],
             ["dotenv", "npm:12.0.3"],
             ["eris", "https://github.com/DonovanDMC/eris.git#commit=5ffe1c11fd2d9f0c51cf29c9c72c7679d17bd2fd"],
             ["fs-extra", "npm:10.0.0"],
             ["module-alias", "npm:2.2.2"],
             ["mongoose", "npm:6.1.6"],
+            ["ms", "npm:2.1.3"],
+            ["string-argv", "npm:0.3.1"],
             ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
@@ -540,6 +585,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["sparse-bitfield", "npm:3.0.3"],
             ["memory-pager", "npm:1.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["string-argv", [
+        ["npm:0.3.1", {
+          "packageLocation": "./.yarn/cache/string-argv-npm-0.3.1-b4f6cd3d7b-efbd0289b5.zip/node_modules/string-argv/",
+          "packageDependencies": [
+            ["string-argv", "npm:0.3.1"]
           ],
           "linkType": "HARD",
         }]

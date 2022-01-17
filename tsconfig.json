@@ -5,6 +5,7 @@
 		"baseUrl": "./src",
 		"skipLibCheck": true,
 		"strictPropertyInitialization": false,
+		"resolveJsonModule": true,
 		"types": [
 			"node"
 		],

@@ -1,9 +1,12 @@
 import { Client, ClientOptions } from 'eris';
 import { performance } from 'perf_hooks';
 import * as fs from 'fs-extra'
-import { events } from './config';
+import { commandDir, eventDir } from './config';
 import ClientEvent from '@util/ClientEvent';
-import Utilites from 'util/Utilities';
+import Utilites from '@util/Utilities';
+import Category from '@util/cmd/Category';
+import CommandHandler from '@util/cmd/CommandHandler';
+import ComponentInteractionCollector from '@util/components/ComponentInteractionCollector';
 
 
 export default class Revolt extends Client { 
@@ -14,14 +17,17 @@ export default class Revolt extends Client {
   }
 
   launch = async () => {
-    
+    ComponentInteractionCollector.setClient(this);
+
+    await this.loadevents();
+    await this.loadCommands();
     await this.connect();
   }
 
   loadevents = async () => {
     const oStart = performance.now();
-    if (!fs.existsSync(events)) throw new Error(`Events directory "${events}" does not exist.`);
-    const list = await fs.readdir(events).then(d => d.filter(f => fs.lstatSync(`${events}/${f}`).isFile()).map(file => `${events}/${file}`))
+    if (!fs.existsSync(eventDir)) throw new Error(`eventDir directory ${eventDir} does not exist.`);
+    const list = await fs.readdir(eventDir).then(d => d.filter(f => fs.lstatSync(`${eventDir}/${f}`).isFile()).map(file => `${eventDir}/${file}`))
     console.log(`Found ${list.length} event${list.length > 1 ? "s" : ""} to load`);
     for (const file of list) {
       const start = performance.now();
@@ -39,5 +45,14 @@ export default class Revolt extends Client {
 
   loadCommands = async () => {
     const start = performance.now()
+    if (!fs.existsSync(commandDir)) throw new Error(`Command directory ${commandDir} does not exist`);
+    const list = await fs.readdir(commandDir).then(v => v.map(ev => `${commandDir}/${ev}`));
+    for (const loc of list) {
+      const { default: cat } = (await import(loc)) as { default: Category; };
+			CommandHandler.registerCategory(cat);
+			CommandHandler.loadCategoryCommands(cat.name, cat.dir);
+    }
+    const end = performance.now();
+    console.log(`Loaded ${CommandHandler.commands.length} commands in ${(end - start).toFixed(3)}ms`)
   }
 }
