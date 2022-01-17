@@ -12,6 +12,7 @@
 			"@config": ["config/index.ts"],
 			"@config/*": ["config/*"],
 			"@events/*": ["config/*"],
+			"@utils/*": ["utils/*"],
 			"@Revolt": ["main.ts"],
 		}
 	},

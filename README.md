@@ -8,15 +8,16 @@ Revolution is a typescript Discord Bot written with [Eris](https://github.com/Do
 - [ ] New Tenor Commands
 - [ ] XP System
 - [ ] Store System
-- [ ] 
 - [ ] Roleplay Features (Hug, Kiss, Punch, etc.)
 - [ ] Music Commands (In the Future)
 
 # IMPROVE
 
-- 
 
-# WORKING ON
+
+# DONE
+
+- [x] Event Handler 
 
 # Important Links
 [Discord](https://discord.gg/PZbaEMkQq4)

@@ -1,14 +1,11 @@
 import './utils/env';
+import './utils/MonkeyPatch';
 import Revolt from './main';
 
 const Revolution = new Revolt(process.env.TOKEN!, {
   intents: [
     'allNonPrivileged'
   ]
-});
-
-Revolution.on("ready", () => {
-  console.log(`[LOGIN]: Ready as ${Revolution.user.username}#${Revolution.user.discriminator}`)
 });
 
 Revolution.launch();
