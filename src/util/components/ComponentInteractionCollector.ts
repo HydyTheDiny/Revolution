@@ -1,5 +1,6 @@
 import Revolt from "@Revolt";
 import { AutocompleteInteraction, CommandInteraction, ComponentInteraction, PingInteraction } from "eris";
+import { inspect } from "util";
 
 export default class ComponentInteractionCollector {
   static client: Revolt;
@@ -12,6 +13,7 @@ export default class ComponentInteractionCollector {
 		timeout: number;
 		i: NodeJS.Timeout;
 	}>;
+
   static setClient = (client: Revolt) => {
     this.client = client;
 		this.client.on("interactionCreate", this.processInteraction.bind(this));
@@ -19,7 +21,6 @@ export default class ComponentInteractionCollector {
 
   static processInteraction = (interaction: PingInteraction | ComponentInteraction | CommandInteraction | AutocompleteInteraction) => {
     let used = false;
-		console.log('interaction')
     if (!(interaction instanceof ComponentInteraction)) return false;
 		if (interaction.data === undefined) return false;
     const collectors = this.collectors.filter((col) => col.channel === interaction.channel.id);

@@ -32,7 +32,7 @@ export default class Revolt extends Client {
     for (const file of list) {
       const start = performance.now();
       let event = await import(file) as ClientEvent | { default: ClientEvent };
-      if ( "default" in event) event = event.default;
+      if ("default" in event) event = event.default;
       if (!Utilites.isOfType(event, ClientEvent)) throw new TypeError(`Export of event "${file}" is not instance of ClientEvent.`);
       this.events.set(event.name, event);
       this.on(event.name, event.listener.bind(this));
