@@ -4,15 +4,19 @@
 		"outDir": "./build",
 		"baseUrl": "./src",
 		"skipLibCheck": true,
+		"strictPropertyInitialization": false,
 		"types": [
 			"node"
+		],
+		"typeRoots": [
+			"./types"
 		],
 		"paths": {
 			"@root/*": ["../*"],
 			"@config": ["config/index.ts"],
 			"@config/*": ["config/*"],
 			"@events/*": ["config/*"],
-			"@utils/*": ["utils/*"],
+			"@util/*": ["util/*"],
 			"@Revolt": ["main.ts"],
 		}
 	},

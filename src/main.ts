@@ -2,8 +2,8 @@ import { Client, ClientOptions } from 'eris';
 import { performance } from 'perf_hooks';
 import * as fs from 'fs-extra'
 import { events } from './config';
-import ClientEvent from '@utils/ClientEvent';
-import Utilites from '@utils/Utilities';
+import ClientEvent from '@util/ClientEvent';
+import Utilites from 'util/Utilities';
 
 
 export default class Revolt extends Client { 
@@ -35,5 +35,9 @@ export default class Revolt extends Client {
     }
     const oEnd = performance.now();
     console.log(`Loaded ${list.length} event${list.length > 1 ? "s" : ""} in ${(oEnd - oStart).toString(2)}ms`);
+  }
+
+  loadCommands = async () => {
+    const start = performance.now()
   }
 }

@@ -1,4 +1,4 @@
-import ClientEvent from "@utils/ClientEvent";
+import ClientEvent from "@util/ClientEvent";
 import mongoose, { Schema, model} from 'mongoose';
 
 export default new ClientEvent('messageCreate', async function(message) {
