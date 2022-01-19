@@ -9,9 +9,6 @@
 		"types": [
 			"node"
 		],
-		"typeRoots": [
-			"./types"
-		],
 		"paths": {
 			"@root/*": ["../*"],
 			"@config": ["config/index.ts"],

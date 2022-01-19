@@ -1,5 +1,5 @@
 import Revolt from "@Revolt";
-import { ArrayOneOrMore } from "@root/types";
+import { ArrayOneOrMore } from "@util/@types";
 import { Permissions } from "@util/Constants";
 import ExtendedMessage from "@util/ExtendedMessage";
 import { MessageContent } from "eris";

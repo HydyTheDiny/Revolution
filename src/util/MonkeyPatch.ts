@@ -2,13 +2,13 @@ import path from "path";
 import moduleAlias from "module-alias";
 import Eris from "eris";
 import ComponentInteractionCollector from "./components/ComponentInteractionCollector";
-const d = path.resolve(`${__dirname}/../`);
+const d = path.resolve(`${__dirname}/../../`);
 moduleAlias.addAliases({
 	"@root": d,
-	"@config": `${d}/config`,
-	"@util": `${d}/util`,
-	"@events": `${d}/events`,
-	"@Revolt": `${d}/main`
+	"@config": `${d}/src/config`,
+	"@util": `${d}/src/util`,
+	"@events": `${d}/src/events`,
+	"@Revolt": `${d}/src/main`
 });
 
 
