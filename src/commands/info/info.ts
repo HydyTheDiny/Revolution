@@ -40,12 +40,12 @@ export default new Command("info")
 						`${emojis.default.dot} [Creator] [Jpuf0](https://github.com/MythicXGN)`,
 						"",
 						"**Other**:",
-						`${emojis.default.dot} Library: [Eris Custom](https://github.com/DonovanDMC/eris/tree/everything) (**${Eris.VERSION}**, \`${eris.split("#")[1].slice(0, 7)}\`)`,
+						`${emojis.default.dot} Library: [Eris Custom](https://github.com/DonovanDMC/eris/tree/everything) (**${Eris.VERSION}**, \`${yarnLock.get(eris).version}\`)`,
 						`${emojis.default.dot} API Version: **v${Eris.Constants.REST_VERSION}**`,
 						`${emojis.default.dot} Gateway Version: **v${Eris.Constants.GATEWAY_VERSION}**`,
 						`${emojis.default.dot} Version: **${pkg.version}**`,
 						`${emojis.default.dot} Node Version: **${process.version}**`,
-						`${emojis.default.dot} Typescript Version: **${typescript}**`,
+						`${emojis.default.dot} Typescript Version: **${yarnLock.get(typescript).version}**`,
 					)
 					.toJSON()
 			],
