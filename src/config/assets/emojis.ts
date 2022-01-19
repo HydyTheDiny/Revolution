@@ -3,6 +3,7 @@ module.exports = {
     in: "📥",
     out: "📤",
     x: "❌",
-    trash: "🗑️"
+    trash: "🗑️",
+    dot: "◽"
   }
 }

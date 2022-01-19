@@ -11,7 +11,7 @@ import { resolve } from "path";
 
 const yarnLock = lockEntries.fromFile(resolve(root,'yarn.lock'))
 
-const typescript = yarnLock.keys().find(item => item.includes("typescript"))!;
+const typescript = yarnLock.keys().find(item => item.includes("typescript@npm"))!;
 const eris = yarnLock.keys().find(item => item.includes("eris"))!;
 
 export default new Command("info")
@@ -37,7 +37,7 @@ export default new Command("info")
 						"",
 						"**Developers**:",
 						`${emojis.default.dot} [Creator] [Jpuf0](https://jpuf.xyz)`,
-						`${emojis.default.dot} [Creator] [Jpuf0](https://github.com/MythicXGN)`,
+						`${emojis.default.dot} [Creator] [MythicXGN](https://github.com/MythicXGN)`,
 						"",
 						"**Other**:",
 						`${emojis.default.dot} Library: [Eris Custom](https://github.com/DonovanDMC/eris/tree/everything) (**${Eris.VERSION}**, \`${yarnLock.get(eris).version}\`)`,
