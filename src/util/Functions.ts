@@ -104,4 +104,10 @@ export default class Functions {
 			value
 		};
 	}
+	
+	static joinAnd(arr: Array<unknown>, joiner = ", ") {
+		if (arr.length === 1) return String(arr[0]);
+		const last = arr.splice(arr.length - 1, 1)[0];
+		return `${arr.join(joiner)}, and ${last}`;
+	}
 }

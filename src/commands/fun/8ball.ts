@@ -27,6 +27,7 @@ export const answers = [
 ];
 
 export default new Command("8ball")
+  .setPermissions("bot", "embedLinks")
   .setDescription("Ask the magic 8 Ball")
   .setUsage('<question to answer>')
   .setExecutor(async function(msg) {

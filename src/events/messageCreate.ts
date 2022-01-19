@@ -1,6 +1,8 @@
 import { developers } from "@config";
 import ClientEvent from "@util/ClientEvent";
+import { Permissions } from "@util/Constants";
 import ExtendedMessage from "@util/ExtendedMessage";
+import Functions from "@util/Functions";
 import { AnyThreadChannel, GuildTextableChannel, Message } from "eris";
 
 export default new ClientEvent('messageCreate', async function(message) {
@@ -16,7 +18,20 @@ export default new ClientEvent('messageCreate', async function(message) {
     }
 
     if (cmd.restrictions.includes("nsfw") && !msg.channel.nsfw) {
-			return msg.reply("H-hey! You have to use that in an nsfw channel!");
+			return msg.reply("You have to use that in an nsfw channel!");
+		}
+
+    const optionalUser = [] as Array<Permissions>;
+		const missingUser = [] as Array<Permissions>;
+		for (const [perm, optional] of cmd.userPermissions) {
+			if (!msg.member.permissions.has(perm)) {
+				if (optional) optionalUser.push(perm);
+				else missingUser.push(perm);
+			}
+		}
+
+    if (missingUser.length > 0) {
+			return msg.reply(`Hey! You're missing the permission${missingUser.length > 1 ? "s" : ""} **${Functions.joinAnd(missingUser.map(p => p || p), "**, **")}**. You must have these to use this command!`);
 		}
   }
 

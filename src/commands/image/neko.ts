@@ -3,6 +3,7 @@ import EmbedBuilder from "@util/EmbedBuilder";
 import req from 'petitio';
 
 export default new Command("neko")
+  .setPermissions("bot", "embedLinks")
   .setDescription('Searches the internet for a neko')
   .setUsage('neko')
   .setExecutor(async function(msg) {

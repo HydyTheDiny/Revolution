@@ -1,5 +1,6 @@
 import Revolt from "@Revolt";
 import { ArrayOneOrMore } from "@root/types";
+import { Permissions } from "@util/Constants";
 import ExtendedMessage from "@util/ExtendedMessage";
 import { MessageContent } from "eris";
 import CommandHandler from "./CommandHandler";
@@ -8,6 +9,8 @@ export type CommandRestrictions = "beta" | "developer" | "nsfw";
 export default class Command {
   triggers: ArrayOneOrMore<string>;
   restrictions = [] as Array<CommandRestrictions>;
+  userPermissions = [] as Array<[perm: Permissions, optional: boolean]>;
+	botPermissions = [] as Array<[perm: Permissions, optional: boolean]>;
   usage: ((this: Revolt, msg: ExtendedMessage, cmd: Command) => MessageContent | null | Promise<MessageContent | null>) = () => null;
   description = "";
   parsedFlags = [] as Array<string>;
@@ -27,6 +30,11 @@ export default class Command {
 
   setRestrictions(...data: Command["restrictions"]) {
 		this.restrictions = data;
+		return this;
+	}
+
+  setPermissions(type: "user" | "bot", ...data: Array<[perm: Permissions, optional?: boolean] | Permissions>) {
+		this[`${type}Permissions` as const] = data.map(p => Array.isArray(p) ? [p[0], p[1] ?? false] : [p, false]);
 		return this;
 	}
 
