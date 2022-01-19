@@ -40,7 +40,7 @@ export default class Revolt extends Client {
       console.log(`Loaded the ${event.name} event in ${(end - start).toFixed(2)}ms`);
     }
     const oEnd = performance.now();
-    console.log(`Loaded ${list.length} event${list.length > 1 ? "s" : ""} in ${(oEnd - oStart).toString(2)}ms`);
+    console.log(`Loaded ${list.length} event${list.length > 1 ? "s" : ""} in ${(oEnd - oStart).toFixed(2)}ms`);
   }
 
   loadCommands = async () => {
