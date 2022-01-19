@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["mongoose", "npm:6.1.6"],
             ["ms", "npm:2.1.3"],
+            ["petitio", "npm:1.4.0"],
             ["rimraf", "npm:3.0.2"],
             ["string-argv", "npm:0.3.1"],
             ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],
@@ -610,6 +611,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["petitio", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/petitio-npm-1.4.0-829bbf40b3-1219a921e2.zip/node_modules/petitio/",
+          "packageDependencies": [
+            ["petitio", "npm:1.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["punycode", [
         ["npm:2.1.1", {
           "packageLocation": "./.yarn/cache/punycode-npm-2.1.1-26eb3e15cf-823bf443c6.zip/node_modules/punycode/",
@@ -647,6 +657,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["mongoose", "npm:6.1.6"],
             ["ms", "npm:2.1.3"],
+            ["petitio", "npm:1.4.0"],
             ["rimraf", "npm:3.0.2"],
             ["string-argv", "npm:0.3.1"],
             ["ts-node", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:10.4.0"],

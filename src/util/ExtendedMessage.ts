@@ -36,7 +36,8 @@ export default class ExtendedMessage extends Message<GuildTextableChannel> {
   async load() {
     const p = parse(this, [
       `<@${this.client.user.id}>`,
-			`<@!${this.client.user.id}>`
+			`<@!${this.client.user.id}>`,
+      'r!'
     ], {
       allowSpaceBeforeCommand: true,
       ignorePrefixCase: true,
