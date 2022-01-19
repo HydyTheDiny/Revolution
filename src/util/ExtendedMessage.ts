@@ -4,6 +4,7 @@ import Command from "./cmd/Command";
 import Functions from "./Functions";
 import { parse } from "discord-command-parser";
 import CommandHandler from "./cmd/CommandHandler";
+import { prefix } from "@config";
 
 export default class ExtendedMessage extends Message<GuildTextableChannel> {
   declare prefix: string;
@@ -37,7 +38,7 @@ export default class ExtendedMessage extends Message<GuildTextableChannel> {
     const p = parse(this, [
       `<@${this.client.user.id}>`,
 			`<@!${this.client.user.id}>`,
-      'r!'
+      prefix
     ], {
       allowSpaceBeforeCommand: true,
       ignorePrefixCase: true,
