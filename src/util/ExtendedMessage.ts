@@ -5,6 +5,8 @@ import Functions from "./Functions";
 import { parse } from "discord-command-parser";
 import CommandHandler from "./cmd/CommandHandler";
 import { prefix } from "@config";
+import { Strings, } from "@uwu-codes/utils";
+
 
 export default class ExtendedMessage extends Message<GuildTextableChannel> {
   declare prefix: string;
@@ -51,7 +53,7 @@ export default class ExtendedMessage extends Message<GuildTextableChannel> {
     this.prefix = p.prefix;
     this.cmd = CommandHandler.getCommand(p.command);
     if (this.cmd !== null) {
-      const flags = Functions.parseFlags(this.args.map(arg => arg.includes(" ") ? `"${arg}"` : arg).join(' '), (name) => this.cmd!.parsedFlags.includes(name));
+      const flags = Strings.parseFlags(this.args.map(arg => arg.includes(" ") ? `"${arg}"` : arg).join(' '), (name) => this.cmd!.parsedFlags.includes(name));
       this.dashedArgs.keyValue = flags.keyValue;
 			this.dashedArgs.value = flags.value;
 			this.args = flags.normalArgs;

@@ -1,7 +1,13 @@
 import EmbedBuilder from "@util/EmbedBuilder";
 import ComponentHelper from "@util/components/ComponentHelper";
 import Eris from "eris";
-import Functions from "@util/Functions";
+import {
+	Internal,
+	Request,
+	Strings,
+	Time,
+	Utility
+} from "@uwu-codes/utils";
 import type Revolt from "@Revolt";
 import * as config from "@config";
 import util from "util";
@@ -23,7 +29,11 @@ export default new Command("eval", "ev")
 	.setExecutor(async function(msg) {
 		const evalVariables: Record<string, unknown> = {
 			Eris,
-			Functions: Functions,
+			Internal,
+			Request,
+			Strings,
+			Time,
+			Utility,
 			CommandHandler,
 			currentUser: this.user.tag,
 			config

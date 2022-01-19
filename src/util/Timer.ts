@@ -1,4 +1,4 @@
-import Time from "./Functions/Time";
+import { Time } from "@uwu-codes/utils";
 
 export default class Timer {
 	static getTime() { return process.hrtime.bigint(); }

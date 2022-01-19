@@ -1,5 +1,4 @@
 import { Message } from "eris";
-import stringArgv from "string-argv";
 
 export default class Functions {
   static messageToOriginal = (message: Message): Record<string, unknown> & { id: string; } => {
@@ -77,37 +76,4 @@ export default class Functions {
 			components: message.components
 		};
   }
-
-	static parseFlags(str: string, nameFilter = (name: string) => true) {
-		const parse = stringArgv(str);
-		const normalArgs = [] as Array<string>;
-		const keyValue = {} as Record<string, string>;
-		const value = [] as Array<string>;
-		parse.forEach(v => {
-			if (!v.startsWith("-")) return normalArgs.push(v);
-			else if (!v.includes("=")) {
-				if (!nameFilter(v.slice(1))) return normalArgs.push(v);
-				else return value.push(v.slice(1));
-			} else {
-				const parts = v.split("-").filter(Boolean);
-				const nameIndex = parts.findIndex(p => p.includes("="));
-				const [name] = parts.slice(0, nameIndex + 1).join("-").split("=");
-				if (!nameFilter(name)) return normalArgs.push(v);
-				const val = parts.splice(nameIndex).join("-").split("=")[1];
-				if ((val.startsWith("\"") && val.endsWith("\"")) || (val.startsWith("'") && val.endsWith("'"))) keyValue[name] = val.slice(1, -1);
-			}
-		});
-
-		return {
-			normalArgs,
-			keyValue,
-			value
-		};
-	}
-	
-	static joinAnd(arr: Array<unknown>, joiner = ", ") {
-		if (arr.length === 1) return String(arr[0]);
-		const last = arr.splice(arr.length - 1, 1)[0];
-		return `${arr.join(joiner)}, and ${last}`;
-	}
 }

@@ -11,6 +11,7 @@ import ComponentInteractionCollector from '@util/components/ComponentInteraction
 
 export default class Revolt extends Client { 
   events = new Map<string, ClientEvent>();
+	cpuUsage = 0;
 
   constructor (token: string, options: ClientOptions) {
     super(token, options);

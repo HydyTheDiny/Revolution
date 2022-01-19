@@ -2,7 +2,7 @@ import { developers } from "@config";
 import ClientEvent from "@util/ClientEvent";
 import { Permissions } from "@util/Constants";
 import ExtendedMessage from "@util/ExtendedMessage";
-import Functions from "@util/Functions";
+import { Strings, Timers } from "@uwu-codes/utils";
 import { AnyThreadChannel, GuildTextableChannel, Message } from "eris";
 
 export default new ClientEvent('messageCreate', async function(message) {
@@ -31,7 +31,7 @@ export default new ClientEvent('messageCreate', async function(message) {
 		}
 
     if (missingUser.length > 0) {
-			return msg.reply(`Hey! You're missing the permission${missingUser.length > 1 ? "s" : ""} **${Functions.joinAnd(missingUser.map(p => p || p), "**, **")}**. You must have these to use this command!`);
+			return msg.reply(`Hey! You're missing the ${Strings.plural("permission", missingUser)} **${Strings.joinAnd(missingUser.map(p => p || p), "**, **")}**. You must have these to use this command!`);
 		}
   }
 
