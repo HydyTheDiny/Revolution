@@ -5,6 +5,7 @@ import { Permissions } from "@util/Constants";
 import ExtendedMessage from "@util/ExtendedMessage";
 import { Strings, Timers } from "@uwu-codes/utils";
 import { AnyThreadChannel, GuildTextableChannel, Message } from "eris";
+import mongoose from 'mongoose';
 
 export default new ClientEvent('messageCreate', async function(message) {
   const msg = new ExtendedMessage(message as Message<Exclude<GuildTextableChannel, AnyThreadChannel>>, this);
@@ -35,6 +36,13 @@ export default new ClientEvent('messageCreate', async function(message) {
 			return msg.reply(`Hey! You're missing the ${Strings.plural("permission", missingUser)} **${Strings.joinAnd(missingUser.map(p => p || p), "**, **")}**. You must have these to use this command!`);
 		}
   }
+
+  if(message){
+    await mongoose.connect("mongodb+srv://Revolution:<ITbO3v8ZWhmtivy1>@incendiium.x4f5o.mongodb.net/test");
+      if(mongoose.connection){
+        console.log('Connected to the Database');
+      }
+  } else return;
 
   void cmd.run.call(this, msg, cmd);
 });

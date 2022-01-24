@@ -4,7 +4,7 @@ Revolution is a typescript Discord Bot written with [Eris](https://github.com/Do
 
 # TODO
 
-- [ ] Write Command Handler & Slash Command Handler
+- [ ] Slash Command Handler
 - [ ] New Tenor Commands
 - [ ] XP System
 - [ ] Store System
@@ -17,7 +17,7 @@ Revolution is a typescript Discord Bot written with [Eris](https://github.com/Do
 
 # DONE
 
-- [x] Event Handler 
+- [x] Event Handler / Command Handler *jpuf did an amazing job on it*
 
 # Important Links
 [Discord](https://discord.gg/PZbaEMkQq4)
