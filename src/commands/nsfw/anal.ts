@@ -26,14 +26,14 @@ const nsfwanswer = [
     "Nya that was bad senpai! This is an NSFW command!"
 ]
 
-export default new Command("4k")
+export default new Command("anal")
   .setPermissions("bot", "embedLinks")
-  .setDescription('Searches the internet for 4k nsfw images')
-  .setUsage('4k')
+  .setDescription('Searches the internet for anal nsfw images')
+  .setUsage('anal')
   .setExecutor(async function(msg) {
     if(msg.channel.nsfw === true){
         let data = await req("https://nekobot.xyz/api/image")
-        .query("type", "4k" ).json<{success: boolean, message: string, color: number, version: string}>()
+        .query("type", "anal" ).json<{success: boolean, message: string, color: number, version: string}>()
       if (!data) return msg.reply('The API returned an error.')
       if (!data.success) return msg.reply('The API returned an error.')
       return msg.reply({
