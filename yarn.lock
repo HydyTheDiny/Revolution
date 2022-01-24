@@ -768,13 +768,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colors@npm:^1.3.3":
-  version: 1.4.0
-  resolution: "colors@npm:1.4.0"
-  checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
-  languageName: node
-  linkType: hard
-
 "commander@npm:^4.0.0":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
@@ -1953,13 +1946,6 @@ eris@DonovanDMC/eris:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.24.0":
-  version: 2.29.1
-  resolution: "moment@npm:2.29.1"
-  checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
-  languageName: node
-  linkType: hard
-
 "mongodb-connection-string-url@npm:^2.3.2":
   version: 2.4.1
   resolution: "mongodb-connection-string-url@npm:2.4.1"
@@ -2351,7 +2337,7 @@ eris@DonovanDMC/eris:
     ms: ^2.1.3
     petitio: ^1.4.0
     rimraf: ^3.0.2
-    tenorjs: ^1.0.8
+    string-argv: ^0.3.1
     ts-node: ^10.4.0
     typescript: ^4.5.4
   languageName: unknown
@@ -2365,13 +2351,6 @@ eris@DonovanDMC/eris:
   bin:
     rimraf: bin.js
   checksum: 87f4164e396f0171b0a3386cc1877a817f572148ee13a7e113b238e48e8a9f2f31d009a92ec38a591ff1567d9662c6b67fd8818a2dbbaed74bc26a87a2a4a9a0
-  languageName: node
-  linkType: hard
-
-"roi@npm:^0.18.0":
-  version: 0.18.0
-  resolution: "roi@npm:0.18.0"
-  checksum: 398c935100eaaa9d15f8755e2d67d65dfcbc3164765a94592fb3aaeb82f1fd1427d6c865a4e98c6dbf61819779e75e01a6558c7723d0922d5c2871a619ad3e25
   languageName: node
   linkType: hard
 
@@ -2573,17 +2552,6 @@ eris@DonovanDMC/eris:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
-  languageName: node
-  linkType: hard
-
-"tenorjs@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "tenorjs@npm:1.0.8"
-  dependencies:
-    colors: ^1.3.3
-    moment: ^2.24.0
-    roi: ^0.18.0
-  checksum: 371a9596042c8a3bdd751e1cb3df0b2a8639e375dcca79be53717b25b800c17ea52a325bb79968287dc6fc10572ab770d4f2af14231e48ffd0f7f3313fa75d9d
   languageName: node
   linkType: hard
 
