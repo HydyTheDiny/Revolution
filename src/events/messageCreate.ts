@@ -1,4 +1,5 @@
 import { developers } from "@config";
+import { nsfwanswer } from "@config/assets/responses";
 import ClientEvent from "@util/ClientEvent";
 import { Permissions } from "@util/Constants";
 import ExtendedMessage from "@util/ExtendedMessage";
@@ -18,7 +19,7 @@ export default new ClientEvent('messageCreate', async function(message) {
     }
 
     if (cmd.restrictions.includes("nsfw") && !msg.channel.nsfw) {
-			return msg.reply("You have to use that in an nsfw channel!");
+			return msg.reply(nsfwanswer[Math.round(Math.random() * (nsfwanswer.length - 1))]);
 		}
 
     const optionalUser = [] as Array<Permissions>;
