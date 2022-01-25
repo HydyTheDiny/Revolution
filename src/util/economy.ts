@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 export default new ClientEvent('messageCreate', async function (message) {
     if(message){
-        await mongoose.connect("mongodb+srv://Revolution:<ITbO3v8ZWhmtivy1>@incendiium.x4f5o.mongodb.net/test");
+        await mongoose.connect("mongodb+srv://Incendiium:<TAWwjPta7Ie0HGm8>@cluster0.am9ut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
       if(mongoose.connection){
         console.log('Connected to the Database');
       }
