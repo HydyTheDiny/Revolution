@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 export default new ClientEvent('messageCreate', async function (message) {
     if(message){
-        await mongoose.connect("mongodb+srv://Revolution:<Revolution.Database.Admin.Access.Allowed>@cluster0.am9ut.mongodb.net/Database?retryWrites=true&w=majority");
+        await mongoose.connect("mongodb+srv://Revolution:<Revolution.Database.Admin.Access.Allowed>@cluster0.am9ut.mongodb.net/DiscordDatabase?retryWrites=true&w=majority");
       if(mongoose.connection){
         console.log('Connected to the Database');
       }
