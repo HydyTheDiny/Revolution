@@ -1985,7 +1985,7 @@ eris@DonovanDMC/eris:
   languageName: node
   linkType: hard
 
-"mongoose@npm:*, mongoose@npm:^6.1.6":
+"mongoose@npm:*":
   version: 6.1.6
   resolution: "mongoose@npm:6.1.6"
   dependencies:
@@ -2347,7 +2347,6 @@ eris@DonovanDMC/eris:
     eris: DonovanDMC/eris
     fs-extra: ^10.0.0
     module-alias: ^2.2.2
-    mongoose: ^6.1.6
     ms: ^2.1.3
     petitio: ^1.4.0
     rimraf: ^3.0.2
