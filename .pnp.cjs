@@ -51,7 +51,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["ms", "npm:2.1.3"],
             ["petitio", "npm:1.4.0"],
+            ["quickdb", "npm:1.0.5"],
             ["rimraf", "npm:3.0.2"],
+            ["sequelize", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:6.14.1"],
             ["sql", "npm:0.78.0"],
             ["sqlite", "npm:4.0.23"],
             ["sqlite3", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:5.0.2"],
@@ -272,6 +274,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tsconfig-node16-npm-1.0.2-1f43ab567a-ca94d36397.zip/node_modules/@tsconfig/node16/",
           "packageDependencies": [
             ["@tsconfig/node16", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/debug", [
+        ["npm:4.1.7", {
+          "packageLocation": "./.yarn/cache/@types-debug-npm-4.1.7-f54c81f8db-0a7b89d8ed.zip/node_modules/@types/debug/",
+          "packageDependencies": [
+            ["@types/debug", "npm:4.1.7"],
+            ["@types/ms", "npm:0.7.31"]
           ],
           "linkType": "HARD",
         }]
@@ -1595,6 +1607,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["dottie", [
+        ["npm:2.0.2", {
+          "packageLocation": "./.yarn/cache/dottie-npm-2.0.2-ef16765a8f-046a581803.zip/node_modules/dottie/",
+          "packageDependencies": [
+            ["dottie", "npm:2.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["ecc-jsbn", [
         ["npm:0.1.2", {
           "packageLocation": "./.yarn/cache/ecc-jsbn-npm-0.1.2-85b7a7be89-22fef4b620.zip/node_modules/ecc-jsbn/",
@@ -2616,6 +2637,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["inflection", [
+        ["npm:1.13.1", {
+          "packageLocation": "./.yarn/cache/inflection-npm-1.13.1-aa8a2a81df-0ae265f710.zip/node_modules/inflection/",
+          "packageDependencies": [
+            ["inflection", "npm:1.13.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["inflight", [
         ["npm:1.0.6", {
           "packageLocation": "./.yarn/cache/inflight-npm-1.0.6-ccedb4b908-f4f76aa072.zip/node_modules/inflight/",
@@ -3346,6 +3376,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["moment-timezone", [
+        ["npm:0.5.34", {
+          "packageLocation": "./.yarn/cache/moment-timezone-npm-0.5.34-e4fe2d01f6-12a1d3d52e.zip/node_modules/moment-timezone/",
+          "packageDependencies": [
+            ["moment-timezone", "npm:0.5.34"],
+            ["moment", "npm:2.29.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["mongodb", [
         ["npm:4.2.2", {
           "packageLocation": "./.yarn/cache/mongodb-npm-4.2.2-5d828ca7b9-645cc8889e.zip/node_modules/mongodb/",
@@ -3876,6 +3916,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["pg-connection-string", [
+        ["npm:2.5.0", {
+          "packageLocation": "./.yarn/cache/pg-connection-string-npm-2.5.0-1ee5de9ab9-a6f3a068f7.zip/node_modules/pg-connection-string/",
+          "packageDependencies": [
+            ["pg-connection-string", "npm:2.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["picomatch", [
         ["npm:2.3.1", {
           "packageLocation": "./.yarn/cache/picomatch-npm-2.3.1-c782cfd986-050c865ce8.zip/node_modules/picomatch/",
@@ -3968,6 +4017,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-b676f8c040.zip/node_modules/queue-microtask/",
           "packageDependencies": [
             ["queue-microtask", "npm:1.2.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["quickdb", [
+        ["npm:1.0.5", {
+          "packageLocation": "./.yarn/cache/quickdb-npm-1.0.5-e6f344ca76-cf6bc0f650.zip/node_modules/quickdb/",
+          "packageDependencies": [
+            ["quickdb", "npm:1.0.5"]
           ],
           "linkType": "HARD",
         }]
@@ -4134,6 +4192,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["retry-as-promised", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/retry-as-promised-npm-5.0.0-305d61b9d1-4d17e0597f.zip/node_modules/retry-as-promised/",
+          "packageDependencies": [
+            ["retry-as-promised", "npm:5.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["reusify", [
         ["npm:1.0.4", {
           "packageLocation": "./.yarn/cache/reusify-npm-1.0.4-95ac4aec11-c3076ebcc2.zip/node_modules/reusify/",
@@ -4164,7 +4231,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["ms", "npm:2.1.3"],
             ["petitio", "npm:1.4.0"],
+            ["quickdb", "npm:1.0.5"],
             ["rimraf", "npm:3.0.2"],
+            ["sequelize", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:6.14.1"],
             ["sql", "npm:0.78.0"],
             ["sqlite", "npm:4.0.23"],
             ["sqlite3", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:5.0.2"],
@@ -4276,6 +4345,80 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["semver", "npm:7.3.5"],
             ["lru-cache", "npm:6.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sequelize", [
+        ["npm:6.14.1", {
+          "packageLocation": "./.yarn/cache/sequelize-npm-6.14.1-0e643c1e43-e77e03241c.zip/node_modules/sequelize/",
+          "packageDependencies": [
+            ["sequelize", "npm:6.14.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:6.14.1", {
+          "packageLocation": "./.yarn/__virtual__/sequelize-virtual-d5a1671350/0/cache/sequelize-npm-6.14.1-0e643c1e43-e77e03241c.zip/node_modules/sequelize/",
+          "packageDependencies": [
+            ["sequelize", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:6.14.1"],
+            ["@types/debug", "npm:4.1.7"],
+            ["@types/ibm_db", null],
+            ["@types/mariadb", null],
+            ["@types/mysql2", null],
+            ["@types/pg", null],
+            ["@types/pg-hstore", null],
+            ["@types/snowflake-sdk", null],
+            ["@types/sqlite3", null],
+            ["@types/tedious", null],
+            ["debug", "virtual:72d46d4b8165804b5935c946809d705c2ef8745b53db4c71d337aa3a4c7c5fb619e2ea9e1493456d326dcc840e7bc7783bd6186ab0a771946b420c810bcd3b6f#npm:4.3.3"],
+            ["dottie", "npm:2.0.2"],
+            ["ibm_db", null],
+            ["inflection", "npm:1.13.1"],
+            ["lodash", "npm:4.17.21"],
+            ["mariadb", null],
+            ["moment", "npm:2.29.1"],
+            ["moment-timezone", "npm:0.5.34"],
+            ["mysql2", null],
+            ["pg", null],
+            ["pg-connection-string", "npm:2.5.0"],
+            ["pg-hstore", null],
+            ["retry-as-promised", "npm:5.0.0"],
+            ["semver", "npm:7.3.5"],
+            ["sequelize-pool", "npm:7.1.0"],
+            ["snowflake-sdk", null],
+            ["sqlite3", "virtual:28adceef30c3613cc80a43df74083dadccce1a299068659ede23e6f5833a1b6fd7c40f7a4a271dfef0b4b4836648e61d26d8147698c47c768c9e0a10882e7330#npm:5.0.2"],
+            ["tedious", null],
+            ["toposort-class", "npm:1.0.1"],
+            ["uuid", "npm:8.3.2"],
+            ["validator", "npm:13.7.0"],
+            ["wkx", "npm:0.5.0"]
+          ],
+          "packagePeers": [
+            "@types/ibm_db",
+            "@types/mariadb",
+            "@types/mysql2",
+            "@types/pg-hstore",
+            "@types/pg",
+            "@types/snowflake-sdk",
+            "@types/sqlite3",
+            "@types/tedious",
+            "ibm_db",
+            "mariadb",
+            "mysql2",
+            "pg-hstore",
+            "pg",
+            "snowflake-sdk",
+            "sqlite3",
+            "tedious"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sequelize-pool", [
+        ["npm:7.1.0", {
+          "packageLocation": "./.yarn/cache/sequelize-pool-npm-7.1.0-670df81ecb-b11d06d02d.zip/node_modules/sequelize-pool/",
+          "packageDependencies": [
+            ["sequelize-pool", "npm:7.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4726,6 +4869,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["toposort-class", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/toposort-class-npm-1.0.1-aefabde69e-c5e3229d48.zip/node_modules/toposort-class/",
+          "packageDependencies": [
+            ["toposort-class", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["tough-cookie", [
         ["npm:2.5.0", {
           "packageLocation": "./.yarn/cache/tough-cookie-npm-2.5.0-79a2fe43fe-16a8cd0902.zip/node_modules/tough-cookie/",
@@ -5002,6 +5154,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["uuid", "npm:3.4.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:8.3.2", {
+          "packageLocation": "./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/",
+          "packageDependencies": [
+            ["uuid", "npm:8.3.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["v8-compile-cache", [
@@ -5019,6 +5178,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["validate-npm-package-name", "npm:3.0.0"],
             ["builtins", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["validator", [
+        ["npm:13.7.0", {
+          "packageLocation": "./.yarn/cache/validator-npm-13.7.0-624277e841-2b83283de1.zip/node_modules/validator/",
+          "packageDependencies": [
+            ["validator", "npm:13.7.0"]
           ],
           "linkType": "HARD",
         }]
@@ -5143,6 +5311,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["wide-align", "npm:1.1.5"],
             ["string-width", "npm:4.2.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["wkx", [
+        ["npm:0.5.0", {
+          "packageLocation": "./.yarn/cache/wkx-npm-0.5.0-fca5152cd8-47b27387de.zip/node_modules/wkx/",
+          "packageDependencies": [
+            ["wkx", "npm:0.5.0"],
+            ["@types/node", "npm:17.0.8"]
           ],
           "linkType": "HARD",
         }]
