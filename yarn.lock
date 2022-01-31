@@ -1500,7 +1500,7 @@ __metadata:
 
 eris@DonovanDMC/eris:
   version: 0.16.2-dev
-  resolution: "eris@git+ssh://git@github.com/DonovanDMC/eris.git#commit=dc8e25c47696ea97d6f27cb7a1069ba184a4b5b5"
+  resolution: "eris@https://github.com/DonovanDMC/eris.git#commit=dc8e25c47696ea97d6f27cb7a1069ba184a4b5b5"
   dependencies:
     opusscript: ^0.0.8
     tweetnacl: ^1.0.3
@@ -1510,7 +1510,7 @@ eris@DonovanDMC/eris:
       optional: true
     tweetnacl:
       optional: true
-  checksum: 78ad48b6485dd942b26e05fce29c3ec6e4555c17cda1e87aedf6d39f34804e4f68aada9133e5c9c839d2e58cf3c9a0b2d654fefb130be21a5ace6b1c22cae797
+  checksum: cb592c08bf31ec61f59a8f3bbbf42fb2366f2874f0c88ba33d6d2f04a62ccf09839e9a5566264dfcce1e0524ef291b60c6186d34cb04706f6c4f148f7c8a2091
   languageName: node
   linkType: hard
 
@@ -1719,8 +1719,8 @@ eris@DonovanDMC/eris:
   linkType: hard
 
 "eslint@npm:^8.0.1":
-  version: 8.7.0
-  resolution: "eslint@npm:8.7.0"
+  version: 8.8.0
+  resolution: "eslint@npm:8.8.0"
   dependencies:
     "@eslint/eslintrc": ^1.0.5
     "@humanwhocodes/config-array": ^0.9.2
@@ -1759,7 +1759,7 @@ eris@DonovanDMC/eris:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 1c80375a48b0fe3ccae3c6354323e4f0e92e970f23abc5b9705b90b7aef514b69ebd0a63e74962d30789986c91fa41c0e25cd2f98f19e9e2a2d36aafdfc9ccc9
+  checksum: 41a7e85bf84cf9f2d758ef3e8d08020a39a2836703728b59535684681349bd021c2c6e24174462b844a914870d707d2151e0371198899d957b444de91adaa435
   languageName: node
   linkType: hard
 
@@ -1830,10 +1830,17 @@ eris@DonovanDMC/eris:
   languageName: node
   linkType: hard
 
-"extsprintf@npm:1.3.0, extsprintf@npm:^1.2.0":
+"extsprintf@npm:1.3.0":
   version: 1.3.0
   resolution: "extsprintf@npm:1.3.0"
   checksum: cee7a4a1e34cffeeec18559109de92c27517e5641991ec6bab849aa64e3081022903dd53084f2080d0d2530803aa5ee84f1e9de642c365452f9e67be8f958ce2
+  languageName: node
+  linkType: hard
+
+"extsprintf@npm:^1.2.0":
+  version: 1.4.1
+  resolution: "extsprintf@npm:1.4.1"
+  checksum: a2f29b241914a8d2bad64363de684821b6b1609d06ae68d5b539e4de6b28659715b5bea94a7265201603713b7027d35399d10b0548f09071c5513e65e8323d33
   languageName: node
   linkType: hard
 
@@ -2429,9 +2436,9 @@ eris@DonovanDMC/eris:
   linkType: hard
 
 "inflection@npm:^1.13.1":
-  version: 1.13.1
-  resolution: "inflection@npm:1.13.1"
-  checksum: 0ae265f710f61320306207501931fe4248dace8e841fb911a33625df68f611bc3736d9f03be5abc5351ae3698c7830e35c400a3a092cd68e93aa3d8cc01cb73a
+  version: 1.13.2
+  resolution: "inflection@npm:1.13.2"
+  checksum: e7ad0559384ed7c526813404bde843f8f17941d47625ad60fc3b09e46efde873dd9840818007c6bd4dbe388e6248fa033d5a8c405c5fc62738c51b118a0e940f
   languageName: node
   linkType: hard
 
@@ -3243,8 +3250,8 @@ eris@DonovanDMC/eris:
   linkType: hard
 
 "mongoose@npm:*":
-  version: 6.1.8
-  resolution: "mongoose@npm:6.1.8"
+  version: 6.1.9
+  resolution: "mongoose@npm:6.1.9"
   dependencies:
     "@types/node": < 17.0.6
     bson: ^4.2.2
@@ -3255,7 +3262,7 @@ eris@DonovanDMC/eris:
     ms: 2.1.2
     regexp-clone: 1.0.0
     sift: 13.5.2
-  checksum: e4f6400d569dda57664a678a046be965e6512cf97c9b2eb455ea95c545c981b0bae70dae05b6bac7a59067c34a5fcb68ff170bc3c8e389874a7730179dcdde29
+  checksum: a2b7b424b9380a3d0a8eb32654736adccedd980e984f19f8806455f458d82b51abc001f304e51a0c8d40305c3f17a81942b9efc5a5eb4f45caa3500c4c3d2254
   languageName: node
   linkType: hard
 
@@ -4158,17 +4165,17 @@ eris@DonovanDMC/eris:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:~5.1.0, safe-buffer@npm:~5.1.1":
-  version: 5.1.2
-  resolution: "safe-buffer@npm:5.1.2"
-  checksum: f2f1f7943ca44a594893a852894055cf619c1fbcb611237fc39e461ae751187e7baf4dc391a72125e0ac4fb2d8c5c0b3c71529622e6a58f46b960211e704903c
-  languageName: node
-  linkType: hard
-
-"safe-buffer@npm:^5.2.1, safe-buffer@npm:~5.2.0":
+"safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:^5.2.1, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
+  languageName: node
+  linkType: hard
+
+"safe-buffer@npm:~5.1.0, safe-buffer@npm:~5.1.1":
+  version: 5.1.2
+  resolution: "safe-buffer@npm:5.1.2"
+  checksum: f2f1f7943ca44a594893a852894055cf619c1fbcb611237fc39e461ae751187e7baf4dc391a72125e0ac4fb2d8c5c0b3c71529622e6a58f46b960211e704903c
   languageName: node
   linkType: hard
 
@@ -4250,8 +4257,8 @@ eris@DonovanDMC/eris:
   linkType: hard
 
 "sequelize@npm:^6.14.1":
-  version: 6.14.1
-  resolution: "sequelize@npm:6.14.1"
+  version: 6.15.0
+  resolution: "sequelize@npm:6.15.0"
   dependencies:
     "@types/debug": ^4.1.7
     debug: ^4.3.3
@@ -4285,7 +4292,7 @@ eris@DonovanDMC/eris:
       optional: true
     tedious:
       optional: true
-  checksum: e77e03241c5b22a6c6fc7b04dd0e6a63d2e9f9b7d4a825e405981fde68547f6015ecf8b8b24783448a44effc8cd471503e34d360df39d4413e110d5694c5d087
+  checksum: 16b17e89596d393dd9fee9c6a73e5cc888921aa32b5ef5fc3da0190af410e2d0eb13de8ab084f8fe98ee36dedb456357e287b2d3537da6d5b15a389f0561949e
   languageName: node
   linkType: hard
 
@@ -4499,7 +4506,7 @@ eris@DonovanDMC/eris:
   languageName: node
   linkType: hard
 
-"string-width@npm:^1.0.1, string-width@npm:^1.0.2 || 2 || 3 || 4":
+"string-width@npm:^1.0.1":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
   dependencies:
@@ -4510,7 +4517,7 @@ eris@DonovanDMC/eris:
   languageName: node
   linkType: hard
 
-"string-width@npm:^4.0.0, string-width@npm:^4.1.0, string-width@npm:^4.2.0, string-width@npm:^4.2.2, string-width@npm:^4.2.3":
+"string-width@npm:^1.0.2 || 2 || 3 || 4, string-width@npm:^4.0.0, string-width@npm:^4.1.0, string-width@npm:^4.2.0, string-width@npm:^4.2.2, string-width@npm:^4.2.3":
   version: 4.2.3
   resolution: "string-width@npm:4.2.3"
   dependencies:
@@ -5062,9 +5069,9 @@ eris@DonovanDMC/eris:
   linkType: hard
 
 "vscode-languageserver-textdocument@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "vscode-languageserver-textdocument@npm:1.0.3"
-  checksum: ed8f1372cd902bcfd18c84654581551594d8f388ff3a0419febfe70d0bc88e5460f6998c6e45f200e90871d6b0528a3b976a632eade7b3e31675400416a2d33d
+  version: 1.0.4
+  resolution: "vscode-languageserver-textdocument@npm:1.0.4"
+  checksum: d0b63abb9d22c1177c26df15807b028129fb966f0dfd01c9ae1d114f1c2a1262d8588bea3e6f6f2e400ada3836da844553d8bc21c64122242a212502ccf5f702
   languageName: node
   linkType: hard
 
