@@ -18,9 +18,11 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "@discordjs/voice": "^0.8.0",
     "@uwu-codes/utils": "^1.0.65",
     "@yarn-tool/yarnlock-entries": "^1.0.31",
     "discord-command-parser": "^1.5.3",
+    "discord-speech-recognition": "^2.2.0",
     "dotenv": "^12.0.3",
     "eris": "DonovanDMC/eris",
     "fs-extra": "^10.0.0",
