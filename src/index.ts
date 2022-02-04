@@ -9,18 +9,4 @@ const Revolution = new Revolt(process.env.TOKEN!, {
   maxShards: 'auto',
 });
 
-
-import { addSpeechEvent } from 'discord-speech-recognition';
-import { joinVoiceChannel } from "@discordjs/voice";
-addSpeechEvent(Revolution);
-
-Revolution.on("messageCreate", (msg) => {
-  var vc = '922961274634129489'
-  Revolution.joinVoiceChannel(vc)
-});
-
-Revolution.on("speech", (msg) => {
-  msg.author.send(msg.content);
-});
-
 Revolution.launch();
