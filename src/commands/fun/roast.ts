@@ -67,5 +67,5 @@ export default new Command("roast")
   .setPermissions("bot", "embedLinks")
   .setDescription("roasts the user")
   .setExecutor(async function(msg) {
-      msg.reply(answers[Math.floor(Math.random() * answers.length)])
+      msg.reply(`${answers[Math.floor(Math.random() * answers.length)]} 🔥`)
   })
