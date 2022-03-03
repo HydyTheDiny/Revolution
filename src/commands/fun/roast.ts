@@ -67,5 +67,25 @@ export default new Command("roast")
   .setPermissions("bot", "embedLinks")
   .setDescription("roasts the user")
   .setExecutor(async function(msg) {
-      msg.reply(`${answers[Math.floor(Math.random() * answers.length)]} 🔥`)
+      if(msg.args.length === null){
+        await msg.reply({
+            embeds: [
+              new EmbedBuilder(true, msg.author)
+                .setTitle("Magic 8 Ball.")
+                .setDescription(`You Roasted:\n\`\`\`\n${msg.args.join(" ")}\`\`\`\n Roast:\`\`\`\n${answers[Math.floor(Math.random() * answers.length)]}\`\`\``)
+                .setFooter("")
+                .toJSON()
+            ]
+          })
+      } else {
+        await msg.reply({
+            embeds: [
+                new EmbedBuilder(true, msg.author)
+                  .setTitle("Roasted.")
+                  .setDescription(`Roast: \`\`\`\n${answers[Math.floor(Math.random() * answers.length)]}\`\`\``)
+                  .setFooter("")
+                  .toJSON()
+              ]
+        })
+      }
   })
