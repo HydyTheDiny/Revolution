@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-extra", "npm:10.0.0"],
             ["module-alias", "npm:2.2.2"],
             ["ms", "npm:2.1.3"],
+            ["mysql", "npm:2.18.1"],
             ["nodemon", "npm:2.0.15"],
             ["petitio", "npm:1.4.0"],
             ["rimraf", "npm:3.0.2"],
@@ -1144,6 +1145,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bindings", "npm:1.5.0"],
             ["node-gyp", "npm:8.4.1"],
             ["prebuild-install", "npm:7.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["bignumber.js", [
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/bignumber.js-npm-9.0.0-ce190bcd7c-51f37890bc.zip/node_modules/bignumber.js/",
+          "packageDependencies": [
+            ["bignumber.js", "npm:9.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4142,6 +4152,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["mysql", [
+        ["npm:2.18.1", {
+          "packageLocation": "./.yarn/cache/mysql-npm-2.18.1-8fdb56201f-430dec8525.zip/node_modules/mysql/",
+          "packageDependencies": [
+            ["mysql", "npm:2.18.1"],
+            ["bignumber.js", "npm:9.0.0"],
+            ["readable-stream", "npm:2.3.7"],
+            ["safe-buffer", "npm:5.1.2"],
+            ["sqlstring", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["napi-build-utils", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/napi-build-utils-npm-1.0.2-892e4bba56-06c14271ee.zip/node_modules/napi-build-utils/",
@@ -5017,6 +5040,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-extra", "npm:10.0.0"],
             ["module-alias", "npm:2.2.2"],
             ["ms", "npm:2.1.3"],
+            ["mysql", "npm:2.18.1"],
             ["nodemon", "npm:2.0.15"],
             ["petitio", "npm:1.4.0"],
             ["rimraf", "npm:3.0.2"],
@@ -5439,6 +5463,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/sqlite-npm-4.0.23-34c08e3eb2-d241407f9d.zip/node_modules/sqlite/",
           "packageDependencies": [
             ["sqlite", "npm:4.0.23"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sqlstring", [
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/sqlstring-npm-2.3.1-2d4ffafe98-de4299cf9b.zip/node_modules/sqlstring/",
+          "packageDependencies": [
+            ["sqlstring", "npm:2.3.1"]
           ],
           "linkType": "HARD",
         }]
